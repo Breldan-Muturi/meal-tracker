@@ -1,0 +1,19 @@
+.details{
+    background-color:whitesmoke;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+p{
+    text-align: center;
+    text-decoration: aquamarine;
+}
+.editDetails{
+    display: flex;
+}
+.btn-outline-primary{
+    width: 100px;
+}
+/*.edit{
+    display: none;
+}*/

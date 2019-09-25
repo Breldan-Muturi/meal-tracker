@@ -1,0 +1,9 @@
+/*Center Website*/
+.main{
+    max-width:1000px;
+    margin: auto;
+    background-color: #f1f1f1;
+}
+appHighlight{
+    cursor: pointer;     
+}

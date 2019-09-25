@@ -1,0 +1,11 @@
+<div *ngFor='let meal of meals; let i = index' class="details">
+  <p>{{ meal.description }}</p>
+  <p>You should eat this meal {{meal.mealDate|dateCount}} days from now to stay on track.</p>
+  <p>Your meal is around {{meal.calories}} calories.</p>
+  <div class="editDetails">
+      <button (click)='mealComplete(true)' class="btn btn-outline-success d-block mx-auto">Complete</button>
+      <button (click)='toggleEdit(i)' class="btn btn-outline-primary d-block mx-auto">Edit</button>
+  </div>
+  <br>
+  <!-- <app-meal-edit-form *ngIf='meal.showEdit' [meal]='meal'></app-meal-edit-form> -->
+</div>

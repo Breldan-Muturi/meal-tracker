@@ -1,0 +1,41 @@
+<div class="edits container-fluid">
+        <h2 class="text-center">Change Details</h2>
+        <hr>
+        <form (ngSubmit)='submitMeal()' #mealForm='ngForm'>
+            <div class="form-group">
+                <label for="food">The Dish</label>
+                <input type="text" required class="form-control" id="food" placeholder="Enter the new meal name" [(ngModel)]="newMeal.food" name="food" #food='ngModel'>
+                <div [hidden]="food.valid || food.pristine" class="alert alert-warning">
+                    <p>The Dish is required.</p>
+                </div>
+            </div>        
+            <div class="form-group">
+                <label for="description">About the Dish</label>
+                <textarea type="text" required class="form-control" id="description" rows="4" placeholder="Describe this meal again" [(ngModel)]="newMeal.description" name="description" #description='ngModel'></textarea>
+                <div [hidden]="description.valid || description.pristine" class="alert alert-warning">
+                    <p>The Dish description is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="calories">Size of serving</label>
+                <select name="calories" id="calories" [(ngModel)]="newMeal.calories" name="calories" #calories='ngModel'>
+                    <option></option>
+                    <option value="500-800">Light Meal</option>
+                    <option value="800-1200">Satisyfying Meal</option>
+                    <option value="1200-1500">Heavy Meal</option>
+                </select>
+                <div [hidden]="calories.valid || calories.pristine" class="alert alert-warning">
+                    <p>The Dish's portion size is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="complete">Schedule meal Date</label>
+                <input type='date' required id="complete" [(ngModel)]="newMeal.completeDate" name="completeDate" #completeDate='ngModel'>
+                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-warning">
+                    <p>The Dish's scheduled date is required.</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mb-5">Add Meal</button>
+            <button type="button" class="btn btn-warning mb-5 ml-5">Back</button>
+        </form>
+    </div>
